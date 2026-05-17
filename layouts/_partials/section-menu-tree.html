@@ -1,0 +1,19 @@
+{{ $menuID := .Params.menu_identifier | default .Section }}
+{{ range site.Menus.main }}
+  {{ if eq .Identifier $menuID }}
+    {{ with .Children }}
+      <nav class="section-menu-tree" aria-label="{{ i18n "section_quick_access" }}">
+        <p class="h5 mb-4 font-semibold text-text-dark dark:text-darkmode-text-dark">
+          {{ i18n "section_quick_access" }}
+        </p>
+        <ul>
+          {{ range . }}
+            <li>
+              <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    {{ end }}
+  {{ end }}
+{{ end }}

@@ -1,0 +1,28 @@
+<div class="bg-body dark:bg-darkmode-body">
+  <h4 class="mb-2">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h4>
+  <p class="mb-4 text-sm">
+    <i class="fa-regular fa-clock mr-2"></i>
+    {{ time.Format ":date_long" .Date }}
+  </p>
+  {{ with .Summary }}
+    <p class="mb-4">{{ . | plainify }}</p>
+  {{ end }}
+  {{ with .Params.document }}
+    {{ $url := .url }}
+    {{ if $url }}
+      <p class="mb-4">
+        <a
+          href="{{ if strings.HasPrefix $url `http` }}{{ $url }}{{ else }}{{ $url | relURL }}{{ end }}"
+          class="text-sm underline"
+          {{ if strings.HasPrefix $url `http` }}target="_blank" rel="noopener"{{ end }}>
+          <i class="fa-regular fa-file mr-1"></i>{{ .label | default "Document" }}
+        </a>
+      </p>
+    {{ end }}
+  {{ end }}
+  <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
+    {{ T "read_more" | default "Lire la suite" }}
+  </a>
+</div>

@@ -1,15 +1,22 @@
 {{ define "main" }}
   {{ partial "page-header" . }}
 
+  {{ $sectionIndexes := slice "local" "tourisme" "conseil-municipal" }}
+  {{ $isSectionIndex := and (eq .File.BaseFileName "_index") (in $sectionIndexes .Section) }}
 
   <section class="section-sm">
     <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-10">
+      <div class="row justify-center{{ if $isSectionIndex }} gx-5{{ end }}">
+        <div class="{{ if $isSectionIndex }}lg:col-8{{ else }}lg:col-10{{ end }}">
           <div class="content">
             {{ .Content }}
           </div>
         </div>
+        {{ if $isSectionIndex }}
+          <aside class="lg:col-4">
+            {{ partial "section-menu-tree" . }}
+          </aside>
+        {{ end }}
       </div>
     </div>
   </section>

@@ -37,41 +37,24 @@
         {{ $pageURL:= $currentPage.Permalink | absLangURL }}
         {{ $active := eq $menuURL $pageURL }}
         {{ if .HasChildren }}
-          {{ $childActive := false }}
-          {{ range .Children }}
-            {{ $childURL := .URL | absLangURL }}
-            {{ if eq $childURL $pageURL }}
-              {{ $childActive = true }}
-            {{ end }}
-          {{ end }}
-          {{ $parentActive := or $active $childActive (hasPrefix $pageURL $menuURL) }}
           <li class="nav-item nav-dropdown group relative">
             <input
               type="checkbox"
               id="submenu-{{ .Name | urlize }}"
               class="peer hidden lg:hidden" />
-            <span class="inline-flex items-center">
-              <a
-                class="nav-link {{ if $parentActive }}active{{ end }}"
-                href="{{ .URL | relLangURL }}">
-                {{ .Name }}
-              </a>
-              <label
-                for="submenu-{{ .Name | urlize }}"
-                class="cursor-pointer inline-flex items-center p-1 lg:hidden">
-                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
-                  <path
-                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                </svg>
-              </label>
-              <svg
-                class="h-4 w-4 fill-current hidden lg:inline-block ml-1"
-                viewBox="0 0 20 20"
-                aria-hidden="true">
+            <label
+              for="submenu-{{ .Name | urlize }}"
+              class="nav-link {{ range .Children }}
+                {{ $childURL := .URL | absLangURL }}
+                {{ $active := eq $childURL $pageURL }}
+                {{ if $active }}active{{ end }}
+              {{ end }} inline-flex items-center">
+              {{ .Name }}
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
                 <path
                   d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
               </svg>
-            </span>
+            </label>
             <ul
               class="nav-dropdown-list hidden peer-checked:block lg:invisible lg:absolute lg:block lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
               {{ range .Children }}
@@ -149,9 +132,7 @@
         {{ end }}
       {{ end }}
 
-      {{ if hugo.IsMultilingual }}
-        {{ partial "components/language-switcher" (dict "Context" . "Class" "mr-5 pl-2 py-1 dark:bg-darkmode-light rounded") }}
-      {{ end }}
+      {{ partial "components/language-switcher" (dict "Context" . "Class" "mr-5 pl-2 py-1 dark:bg-darkmode-light rounded") }}
       {{ partial "components/theme-switcher" (dict "Class" "mr-5") }}
 
 

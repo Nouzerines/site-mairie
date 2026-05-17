@@ -1,0 +1,15 @@
+{{ $articles := slice }}
+{{ range .Pages }}
+{{ $event := dict
+  "title" .Title
+  "url" (.Params.url | default .RelPermalink)
+}}
+{{ if .Params.start }}
+{{ $event = merge $event (dict
+  "start" .Params.start
+  "end" (.Params.end | default "")
+) }}
+{{ end }}
+{{ $articles = $articles | append $event }}
+{{ end }}
+{{ $articles | jsonify }}

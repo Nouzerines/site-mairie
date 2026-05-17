@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-10">
+          {{ with .Content }}
+            <div class="content mb-10">{{ . }}</div>
+          {{ end }}
+          {{ range first 3 (.RegularPages.ByDate.Reverse) }}
+            <article class="mb-14 border-b border-border pb-14 last:border-0 dark:border-darkmode-border">
+              <h2 class="h4 mb-6">
+                {{ partial "menus-cantine-title" . }}
+              </h2>
+              {{ partial "menus-cantine-table" . }}
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

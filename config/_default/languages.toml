@@ -1,0 +1,9 @@
+[fr]
+label = "Français"
+locale = "fr-fr"
+weight = 1
+
+[en]
+label = "English"
+locale = "en-us"
+weight = 2

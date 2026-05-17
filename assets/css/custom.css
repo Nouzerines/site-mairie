@@ -1,2 +1,49 @@
-/* DO NOT WRITE ANY STYLE IN THIS FILE */
-/* If you want to add your own styles, please write it in the `./assets/css/custom.css` file. */
+/* Add your own custom styles here */
+
+@layer base {
+  :is(h1, h2, h3, h4, h5, h6)[id] {
+    @apply scroll-mt-24;
+  }
+
+  body:has(.home-inpage-nav) :is(h2, h3, h4)[id] {
+    @apply scroll-mt-36;
+  }
+}
+
+@layer components {
+  .table-fit {
+    @apply my-4 block w-fit max-w-full overflow-x-auto;
+  }
+
+  .table-fit table {
+    @apply w-auto;
+  }
+
+  .section-menu-tree {
+    @apply rounded-lg bg-light p-6 dark:bg-darkmode-light;
+  }
+
+  .section-menu-tree ul {
+    @apply list-none space-y-3 p-0;
+  }
+
+  .section-menu-tree a {
+    @apply block rounded-md px-3 py-2 text-text-dark no-underline transition hover:bg-primary/10 hover:text-primary dark:text-darkmode-text-dark dark:hover:bg-darkmode-primary/20 dark:hover:text-darkmode-primary;
+  }
+
+  .home-inpage-nav ul {
+    @apply m-0 flex list-none flex-wrap gap-x-6 gap-y-2 p-0;
+  }
+
+  .home-inpage-nav a {
+    @apply text-sm text-text-dark underline-offset-4 transition hover:text-primary hover:underline dark:text-darkmode-text-dark dark:hover:text-darkmode-primary;
+  }
+
+  .menus-cantine-table {
+    @apply mb-4 w-full overflow-x-auto;
+  }
+
+  .menus-cantine-table table {
+    @apply w-full min-w-[36rem];
+  }
+}

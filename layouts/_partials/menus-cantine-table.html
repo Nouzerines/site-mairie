@@ -1,0 +1,36 @@
+{{ $page := . }}
+{{ $jours := $page.Params.jours }}
+{{ if $jours }}
+  {{ $dayKeys := slice "lundi" "mardi" "mercredi" "jeudi" "vendredi" }}
+  {{ $dayLabels := slice "Lundi" "Mardi" "Mercredi" "Jeudi" "Vendredi" }}
+  {{ $courses := slice "entree" "plat" "fromage" "dessert" }}
+  {{ $courseLabels := slice "Entrée" "Plat" "Fromage" "Dessert" }}
+  <div class="menus-cantine-table content">
+    <table>
+      <thead>
+        <tr>
+          <th scope="row"></th>
+          {{ range $i, $key := $dayKeys }}
+            {{ $day := index $jours $key }}
+            {{ if $day }}
+              <th scope="col">{{ index $dayLabels $i }}</th>
+            {{ end }}
+          {{ end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $ci, $course := $courses }}
+          <tr>
+            <th scope="row">{{ index $courseLabels $ci }}</th>
+            {{ range $dayKeys }}
+              {{ $day := index $jours . }}
+              <td>
+                {{ if $day }}{{ index $day $course | default "—" }}{{ else }}—{{ end }}
+              </td>
+            {{ end }}
+          </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+{{ end }}

@@ -11,6 +11,8 @@ package-lock.json
 public
 resources
 .hugo_build.lock
+hugo_stats.json
 jsconfig.json
 go.sum
 yarn.lock
+.idea

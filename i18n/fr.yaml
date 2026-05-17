@@ -1,0 +1,21 @@
+home: Accueil
+read_more: Lire plus
+send: Envoyer
+related_posts: Articles liés
+categories: Catégories
+tags: Tags
+toc: Table des matières
+section_quick_access: Accès rapide
+on_this_page: Sur cette page
+share: Partager
+search_input_placeholder: Rechercher un article...
+search_no_results: Pas de résultat pour
+search_initial_message: Tapez quelque chose pour rechercher...
+search_navigate: pour naviguer
+search_select: pour sélectionner
+search_close: pour fermer
+error404Title: Page non trouvée
+error404Message: La page que vous recherchez a peut-être été supprimée, a changé de nom ou est temporairement indisponible.
+error404BackHome: Retour à l'accueil
+menu-open: Ouvrir le menu
+menu-close: Fermer le menu

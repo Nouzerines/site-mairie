@@ -1,0 +1,133 @@
+############# French navigation ##############
+
+# main menu
+[[main]]
+name = "Accueil"
+url = "/"
+weight = 1
+identifier = "accueil"
+
+[[main]]
+parent = "accueil"
+name = "Agenda"
+url = "/agenda/"
+weight = 1
+
+[[main]]
+name = "Vie locale"
+url = "/local/"
+weight = 2
+identifier = "local"
+
+[[main]]
+parent = "local"
+name = "Actualités"
+url = "/articles/"
+weight = 1
+
+[[main]]
+parent = "local"
+name = "Menus de la cantine"
+url = "/menus-cantine/"
+weight = 2
+
+[[main]]
+parent = "local"
+name = "Associations"
+url = "/local/associations/"
+weight = 3
+
+[[main]]
+parent = "local"
+name = "Gestion des déchets"
+url = "/local/gestion-des-dechets/"
+weight = 4
+
+[[main]]
+parent = "local"
+name = "Location salle des fêtes/stade"
+url = "/local/location-salle-des-fetes-stade/"
+weight = 5
+
+[[main]]
+parent = "local"
+name = "Entreprises"
+url = "/local/entreprises/"
+weight = 6
+
+[[main]]
+parent = "local"
+name = "Cimetière"
+url = "/local/cimetiere/"
+weight = 7
+
+[[main]]
+parent = "local"
+name = "Patrimoine"
+url = "/local/patrimoine/"
+weight = 8
+
+[[main]]
+name = "Tourisme"
+url = "/tourisme/"
+weight = 3
+identifier = "tourisme"
+
+[[main]]
+parent = "tourisme"
+name = "Où dormir"
+url = "/tourisme/ou-dormir/"
+weight = 1
+
+[[main]]
+parent = "tourisme"
+name = "Où manger"
+url = "/tourisme/ou-manger/"
+weight = 2
+
+[[main]]
+parent = "tourisme"
+name = "Randonnées"
+url = "/tourisme/randonnees/"
+weight = 3
+
+[[main]]
+parent = "tourisme"
+name = "Marchés"
+url = "/tourisme/marches/"
+weight = 4
+
+[[main]]
+parent = "tourisme"
+name = "Office de tourisme"
+url = "/tourisme/office-de-tourisme/"
+weight = 5
+
+[[main]]
+name = "Conseil municipal"
+url = "/conseil-municipal/"
+weight = 4
+identifier = "conseil-municipal"
+
+[[main]]
+parent = "conseil-municipal"
+name = "Les élus"
+url = "/conseil-municipal/les-elus/"
+weight = 1
+
+[[main]]
+parent = "conseil-municipal"
+name = "Compte-rendus"
+url = "/compte-rendus/"
+weight = 2
+
+# footer menu
+[[footer]]
+name = "Conseil municipal"
+url = "/conseil-municipal/"
+weight = 1
+
+[[footer]]
+name = "Mentions légales"
+url = "/legal"
+weight = 3

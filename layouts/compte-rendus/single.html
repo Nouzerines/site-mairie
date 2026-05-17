@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <section class="section pt-7">
+    <div class="container">
+      <div class="row justify-center">
+        <article class="lg:col-10">
+          <h1 class="h2 mb-4">{{ .Title }}</h1>
+          <p class="mb-6 text-sm">
+            <i class="fa-regular fa-clock mr-2"></i>
+            {{ time.Format ":date_long" .Date }}
+          </p>
+          {{ with .Params.document }}
+            {{ $url := .url }}
+            {{ if $url }}
+              <p class="mb-8">
+                <a
+                  href="{{ if strings.HasPrefix $url `http` }}{{ $url }}{{ else }}{{ $url | relURL }}{{ end }}"
+                  class="btn btn-primary"
+                  {{ if strings.HasPrefix $url `http` }}target="_blank" rel="noopener"{{ end }}>
+                  <i class="fa-regular fa-file mr-2"></i>{{ .label | default "Télécharger le document" }}
+                </a>
+              </p>
+            {{ end }}
+          {{ end }}
+          <div class="content mb-10">
+            {{ .Content }}
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+{{ end }}
