@@ -1,0 +1,56 @@
+{
+  "file": "content/articles/post-1.md",
+  "name": "articles",
+  "fileType": "md",
+  "fmType": "yaml",
+  "template": [
+    {
+      "name": "title",
+      "label": "Title",
+      "type": "string",
+      "value": "",
+      "isIgnored": false,
+      "defaultValue": ""
+    },
+    {
+      "name": "date",
+      "label": "Date",
+      "type": "Date",
+      "value": "",
+      "isIgnored": false,
+      "defaultValue": "",
+      "alwaysUseCurrentDate": false
+    },
+    {
+      "name": "draft",
+      "label": "Draft",
+      "type": "boolean",
+      "value": false,
+      "description": "image: \"/images/banner.jpg\"\ncategories: [\"Application\", \"Data\"]\nauthor: \"John Doe\"\ntags: [\"nextjs\", \"tailwind\"]\nstart: 2026-05-19\nend: 2026-05-22",
+      "isIgnored": false,
+      "defaultValue": false
+    },
+    {
+      "name": "start",
+      "label": "start",
+      "type": "Date",
+      "value": "",
+      "description": "",
+      "isIgnored": false,
+      "isRequired": false,
+      "defaultValue": "",
+      "alwaysUseCurrentDate": false
+    },
+    {
+      "name": "end",
+      "label": "end",
+      "type": "Date",
+      "value": "",
+      "description": "",
+      "isIgnored": false,
+      "isRequired": false,
+      "defaultValue": "",
+      "alwaysUseCurrentDate": false
+    }
+  ]
+}
