@@ -1,6 +1,5 @@
 {
   "file": "content/articles/post-1.md",
-  "name": "articles",
   "fileType": "md",
   "fmType": "yaml",
   "template": [
@@ -51,6 +50,16 @@
       "isRequired": false,
       "defaultValue": "",
       "alwaysUseCurrentDate": false
+    },
+    {
+      "name": "image",
+      "label": "image",
+      "type": "media",
+      "value": "",
+      "description": "",
+      "isIgnored": false,
+      "isRequired": false,
+      "defaultValue": ""
     }
   ]
 }
