@@ -13,7 +13,7 @@
         <h2 class="h3 mb-6 scroll-mt-36" id="mot-du-maire">Mot du maire</h2>
         <div class="content">{{ .Content }}</div>
 
-        <h2 class="h3 mb-6 scroll-mt-36" id="agenda">Agenda <a href="{{ "agenda" | relURL }}">🔗</a></h2>
+        <h2 class="h3 mb-6 scroll-mt-36" id="agenda">Agenda</h2>
 
         <div id="calendar"></div>
 
@@ -53,7 +53,7 @@
       headerToolbar: {
         left: 'prev,today,next',
         center: 'title',
-        right: 'listMonth,dayGridMonth,timeGridWeek,timeGridDay'
+        right: 'listMonth,dayGridMonth,timeGridWeek'
       },
       events: '{{ "articles/index.json" | relURL }}',
       eventClick: function(info) {
