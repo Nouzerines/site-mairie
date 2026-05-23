@@ -1,5 +1,5 @@
 ---
-title: "Accueil"
+title: "Mot du maire"
 image: "/images/banner.jpg"
 layout: "home"
 ---

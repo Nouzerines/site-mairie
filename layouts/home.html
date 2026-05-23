@@ -7,11 +7,24 @@
     <div class="row justify-center">
       <div class="lg:col-10">
         {{ partial "home-inpage-nav" . }}
-        {{ if .Params.image }}
-        {{ partial "image" (dict "Src" .Params.image "Context" .Page "Alt" .Title "Class" "mx-auto rounded mb-6" ) }}
-        {{ end }}
-        <h2 class="h3 mb-6 scroll-mt-36" id="mot-du-maire">Mot du maire</h2>
-        <div class="content">{{ .Content }}</div>
+
+        <div
+          class="section-sm bg-gradient scroll-mt-36 relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2"
+          id="accueil">
+          <div class="container">
+            <div class="row items-center justify-between">
+              {{ with .Params.image }}
+                <div class="md:col-5 mb-6 md:mb-0">
+                  {{ partial "image" (dict "Src" . "Context" $.Page "Alt" $.Title "Class" "rounded" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+                </div>
+              {{ end }}
+              <div class="{{ if .Params.image }}md:col-7 lg:col-6{{ else }}col-12{{ end }}">
+                <h2 class="h3 mb-4">{{ .Title }}</h2>
+                <div class="content">{{ .Content }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <h2 class="h3 mb-6 scroll-mt-36" id="agenda">Agenda</h2>
 
