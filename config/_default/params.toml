@@ -41,6 +41,34 @@ enable = false
 label = "Github"
 link = "https://github.com/zeon-studio/hugoplate"
 
+# Contact button (header, next to search)
+[contact_button]
+enable = true
+label = "Contact"
+link = "contact/"
+
+# Mairie contact details (footer and contact page)
+[mairie]
+address = "1 place de la mairie, 23600 Nouzerines"
+phone = "05 55 82 01 82"
+email = "mairie-nouzerines@orange.fr"
+opening_hours = "Lundi, mardi et vendredi de 8h à 12h"
+
+[[mairie.institution_links]]
+name = "Département de la Creuse"
+url = "https://www.creuse.fr/"
+image = "images/institutions/departement-creuse.jpg"
+
+[[mairie.institution_links]]
+name = "Conseil régional Nouvelle-Aquitaine"
+url = "https://www.laregion-alpc.fr/"
+image = "images/institutions/region.jpg"
+
+[[mairie.institution_links]]
+name = "Préfecture de la Creuse"
+url = "https://www.creuse.pref.gouv.fr/"
+image = "images/institutions/prefecture-creuse.jpg"
+
 # LLMs Configuration
 # LLMs module: https://github.com/gethugothemes/hugo-modules/tree/master/llms-txt
 [llms]

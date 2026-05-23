@@ -1,0 +1,75 @@
+<footer class="bg-light dark:bg-darkmode-light">
+  <div class="container">
+    <div class="row items-start py-10">
+      <div class="lg:col-3 mb-8 text-center lg:mb-0 lg:text-left">
+        <a
+          class="navbar-brand inline-block"
+          href="{{ site.Home.RelPermalink }}">
+          {{ partial "logo" }}
+        </a>
+      </div>
+      <div class="lg:col-5 mb-8 text-center lg:mb-0 lg:text-right">
+        {{ partial "mairie-contact-details" (dict "footer" true) }}
+      </div>
+      <div class="lg:col-4 mb-8 text-center lg:mb-0 lg:text-left">
+        <ul class="social-icons mb-6 justify-center lg:justify-start">
+          {{ range hugo.Data.social.main }}
+            <li>
+              <a
+                target="_blank"
+                aria-label="{{ .name }}"
+                rel="nofollow noopener"
+                href="{{ .link | safeURL }}">
+                <i class="{{ .icon }}"></i>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+        <ul class="mb-6">
+          {{ range site.Menus.footer }}
+            <li class="mb-2">
+              <a
+                {{ if findRE `^http` .URL }}
+                  target="_blank" rel="noopener"
+                {{ end }}
+                href="{{ if findRE `^#` .URL }}
+                  {{ if not $.IsHome }}
+                    {{ site.Home.RelPermalink }}
+                  {{ end }}{{ .URL }}
+                {{ else }}
+                  {{ .URL | relLangURL }}
+                {{ end }}"
+                >{{ .Name }}</a
+              >
+            </li>
+          {{ end }}
+        </ul>
+        {{ with site.Params.mairie.institution_links }}
+          <div class="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+            {{ range . }}
+              <a
+                href="{{ .url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="{{ .name }}">
+                <img
+                  src="{{ .image | relURL }}"
+                  alt="{{ .name }}"
+                  class="max-h-16 w-auto"
+                  loading="lazy" />
+              </a>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="border-border dark:border-darkmode-border border-t py-7">
+    <div
+      class="text-text-light dark:text-darkmode-text-light container text-center">
+      <p>
+        {{ site.Params.copyright | markdownify }}
+      </p>
+    </div>
+  </div>
+</footer>

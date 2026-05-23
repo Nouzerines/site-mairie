@@ -117,11 +117,6 @@ weight = 2
 
 # footer menu
 [[footer]]
-name = "Conseil municipal"
-url = "/conseil-municipal/"
-weight = 1
-
-[[footer]]
 name = "Mentions légales"
 url = "/legal"
-weight = 3
+weight = 1

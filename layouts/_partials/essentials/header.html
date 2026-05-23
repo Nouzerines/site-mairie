@@ -130,6 +130,15 @@
           </a>
         </li>
       {{ end }}
+      {{ with site.Params.contact_button }}
+        {{ if .enable }}
+          <li class="mt-4 inline-block lg:hidden">
+            <a class="btn btn-outline-primary btn-sm" href="{{ .link | relLangURL }}">
+              {{ .label }}
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
     </ul>
 
     <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
@@ -140,12 +149,22 @@
             class="border-border text-text-dark hover:text-primary
             dark:border-darkmode-border mr-5 inline-block border-r pr-5
             text-xl dark:text-white cursor-pointer dark:hover:text-darkmode-primary
-            {{ if not (or site.Params.navigation_button.enable site.Params.theme_switcher) }}
+            {{ if not (or site.Params.navigation_button.enable site.Params.contact_button.enable site.Params.theme_switcher) }}
               lg:border-r-0 lg:pr-0
             {{ end }}"
             data-target="search-modal">
             <i class="fa-solid fa-search"></i>
           </button>
+        {{ end }}
+      {{ end }}
+
+      {{ with site.Params.contact_button }}
+        {{ if .enable }}
+          <a
+            href="{{ .link | relLangURL }}"
+            class="btn btn-outline-primary btn-sm mr-5 hidden lg:inline-block">
+            {{ .label }}
+          </a>
         {{ end }}
       {{ end }}
 

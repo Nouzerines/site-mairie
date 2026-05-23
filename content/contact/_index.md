@@ -1,7 +1,6 @@
 ---
 title: "Contact"
-meta_title: ""
-description: "this is meta description"
+description: "Coordonnées et horaires d'ouverture de la mairie de Nouzerines"
 layout: "contact"
 draft: false
 ---

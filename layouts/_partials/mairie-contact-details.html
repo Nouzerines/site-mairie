@@ -1,0 +1,27 @@
+{{ $footer := index . "footer" | default false }}
+{{ with site.Params.mairie }}
+  <address
+    class="mairie-contact not-italic{{ if $footer }} text-right space-y-1{{ end }}">
+    <p class="{{ if not $footer }}mb-4{{ end }}">{{ .address }}</p>
+    <p class="{{ if not $footer }}mb-4{{ end }}{{ if $footer }} flex justify-end{{ end }}">
+      <a
+        class="inline-flex items-center gap-2 hover:text-primary dark:hover:text-darkmode-primary"
+        href="tel:+33{{ substr (replace .phone " " "") 1 }}">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        <span>{{ .phone }}</span>
+      </a>
+    </p>
+    <p class="{{ if not $footer }}mb-4{{ end }}{{ if $footer }} flex justify-end{{ end }}">
+      <a
+        class="inline-flex items-center gap-2 hover:text-primary dark:hover:text-darkmode-primary"
+        href="mailto:{{ .email }}">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <span>{{ .email }}</span>
+      </a>
+    </p>
+    <p>
+      <span class="font-semibold">Horaires d'ouverture&nbsp;:</span>
+      {{ .opening_hours }}
+    </p>
+  </address>
+{{ end }}
