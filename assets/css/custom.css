@@ -1,5 +1,9 @@
 /* Add your own custom styles here */
 
+@utility bg-gradient {
+  @apply bg-linear-to-b from-secondary from-[0.53%] to-body to-[83.28%] dark:from-darkmode-light dark:to-darkmode-body;
+}
+
 @layer base {
   :is(h1, h2, h3, h4, h5, h6)[id] {
     @apply scroll-mt-24;
@@ -11,6 +15,10 @@
 }
 
 @layer components {
+  .header {
+    @apply border-b border-border bg-secondary dark:border-darkmode-border dark:bg-darkmode-light;
+  }
+
   .table-fit {
     @apply my-4 block w-fit max-w-full overflow-x-auto;
   }
@@ -20,7 +28,7 @@
   }
 
   .section-menu-tree {
-    @apply rounded-lg bg-light p-6 dark:bg-darkmode-light;
+    @apply rounded-lg border border-secondary/50 bg-light p-6 dark:border-darkmode-border dark:bg-darkmode-light;
   }
 
   .section-menu-tree ul {
@@ -28,7 +36,25 @@
   }
 
   .section-menu-tree a {
-    @apply block rounded-md px-3 py-2 text-text-dark no-underline transition hover:bg-primary/10 hover:text-primary dark:text-darkmode-text-dark dark:hover:bg-darkmode-primary/20 dark:hover:text-darkmode-primary;
+    @apply block rounded-md px-3 py-2 text-text-dark no-underline transition hover:bg-primary/15 hover:text-primary dark:text-darkmode-text-dark dark:hover:bg-darkmode-primary/25 dark:hover:text-darkmode-primary;
+  }
+
+  .home-page,
+  .home-page .container,
+  .home-page .row,
+  .home-page__content {
+    @apply overflow-visible;
+  }
+
+  .home-inpage-nav {
+    @apply sticky z-20 mb-8 border-b border-primary/25 border-border bg-secondary/95 py-3 pl-4 dark:border-darkmode-border dark:bg-darkmode-body/95 lg:pl-6;
+    top: 5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .home-inpage-nav {
+      top: 6rem;
+    }
   }
 
   .home-inpage-nav ul {
@@ -45,5 +71,9 @@
 
   .menus-cantine-table table {
     @apply w-full min-w-[36rem];
+  }
+
+  .page-header-banner {
+    @apply rounded-2xl bg-linear-to-b from-secondary/70 to-light px-8 py-14 dark:from-darkmode-light dark:to-darkmode-body;
   }
 }
