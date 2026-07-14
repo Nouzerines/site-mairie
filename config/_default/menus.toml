@@ -21,44 +21,50 @@ weight = 1
 
 [[main]]
 parent = "local"
-name = "Gestion des déchets"
-url = "/local/gestion-des-dechets/"
+name = "Bon voisinage"
+url = "/local/bon-voisinage/"
 weight = 2
-
-[[main]]
-parent = "local"
-name = "Location salle des fêtes/stade"
-url = "/local/location-salle-des-fetes-stade/"
-weight = 3
-
-[[main]]
-parent = "local"
-name = "Entreprises"
-url = "/local/entreprises/"
-weight = 4
 
 [[main]]
 parent = "local"
 name = "Cimetière"
 url = "/local/cimetiere/"
-weight = 5
-
-[[main]]
-parent = "local"
-name = "Patrimoine"
-url = "/local/patrimoine/"
-weight = 6
+weight = 3
 
 [[main]]
 parent = "local"
 name = "Démarches administratives"
 url = "/local/demarches-administratives/"
+weight = 4
+
+[[main]]
+parent = "local"
+name = "École"
+url = "/local/ecole/"
+weight = 4
+
+[[main]]
+parent = "local"
+name = "Entreprises"
+url = "/local/entreprises/"
+weight = 5
+
+[[main]]
+parent = "local"
+name = "Gestion des déchets"
+url = "/local/gestion-des-dechets/"
+weight = 6
+
+[[main]]
+parent = "local"
+name = "Location salle des fêtes/stade"
+url = "/local/location-salle-des-fetes-stade/"
 weight = 7
 
 [[main]]
 parent = "local"
-name = "Bon voisinage"
-url = "/local/bon-voisinage/"
+name = "Patrimoine"
+url = "/local/patrimoine/"
 weight = 8
 
 [[main]]
@@ -69,33 +75,27 @@ identifier = "tourisme"
 
 [[main]]
 parent = "tourisme"
+name = "Marchés"
+url = "/tourisme/marches/"
+weight = 1
+
+[[main]]
+parent = "tourisme"
 name = "Où dormir"
 url = "/tourisme/ou-dormir/"
-weight = 1
+weight = 2
 
 [[main]]
 parent = "tourisme"
 name = "Où manger"
 url = "/tourisme/ou-manger/"
-weight = 2
+weight = 3
 
 [[main]]
 parent = "tourisme"
 name = "Randonnées"
 url = "/tourisme/randonnees/"
-weight = 3
-
-[[main]]
-parent = "tourisme"
-name = "Marchés"
-url = "/tourisme/marches/"
 weight = 4
-
-[[main]]
-parent = "tourisme"
-name = "Office de tourisme"
-url = "/tourisme/office-de-tourisme/"
-weight = 5
 
 [[main]]
 name = "Conseil municipal"
@@ -111,7 +111,7 @@ weight = 1
 
 [[main]]
 parent = "conseil-municipal"
-name = "Compte-rendus"
+name = "Arrêtés, délibérations et procès-verbaux"
 url = "/compte-rendus/"
 weight = 2
 
