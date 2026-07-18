@@ -1,0 +1,18 @@
+{{- $field := .Get 0 | default (.Get "field") | default "email" -}}
+{{- $linkParam := .Get "link" -}}
+{{- $link := true -}}
+{{- if or (eq $linkParam "false") (eq $linkParam false) -}}
+  {{- $link = false -}}
+{{- end -}}
+{{- with site.Params.mairie -}}
+  {{- $value := index . $field -}}
+  {{- if not $value -}}
+    {{- errorf "shortcode mairie: champ %q introuvable dans params.mairie" $field -}}
+  {{- else if and $link (eq $field "email") -}}
+    <a href="mailto:{{ $value }}">{{ $value }}</a>
+  {{- else if and $link (eq $field "phone") -}}
+    <a href="tel:+33{{ substr (replace $value " " "") 1 }}">{{ $value }}</a>
+  {{- else -}}
+    {{- $value -}}
+  {{- end -}}
+{{- end -}}

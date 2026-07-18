@@ -4,9 +4,17 @@ layout: "single"
 menu_identifier: "local"
 ---
 
-Notre commune, d’une superficie de 1909 hectares rassemble une population de 272 habitants (dernier recensement).
-Nous sommes limitrophes de Vijon dans le Département de l’Indre et voisins de Bussière-Saint-Georges, Malleret-Boussac, Bétête et Tercillat.
+Nouzerines était un prieuré de la grande abbaye de Déols (proche de Châteauroux). Fondé probablement vers la fin du XIe siècle,
+et mentionné par des chartes dès 1192 (« Nozerines »), il appartenait à l'ancien archiprêtré d'Anzême.
 
-La commune se situe à une altitude moyenne de 418 mètres, est composée d'une quinzaine de hameaux et les habitants sont appelés les Nouzerinois et les Nouzerinoises.
+Son nom a pour racine latine *nux, nucis* (la noix). Selon certains, cette racine évoquerait la présence de noisetiers
+en touffes ou bosquets ; d'autres privilégient le sens de « noyers, noyeraies ». 
 
-Retrouvez ici les informations pratiques sur la vie à Nouzerines : associations, services municipaux, patrimoine et vie économique.
+Les habitants sont appelés les Nouzerinois et les Nouzerinoises.
+
+D’une superficie de 19km², Nouzerines rassemble une population de 272 habitants (dernier recensement 2026), répartie sur une quinzaine de hameaux.
+Elle est voisine de Bussière-Saint-Georges, Malleret-Boussac, Bétête, Tercillat, et Vijon (Indre).
+
+La commune se situe à une altitude moyenne de 418 mètres (minimum 404m, maximum 454m).
+
+![carte](carte-nouzerines.png)

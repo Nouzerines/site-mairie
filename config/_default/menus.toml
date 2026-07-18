@@ -58,7 +58,7 @@ weight = 6
 [[main]]
 parent = "local"
 name = "Location salle des fêtes/stade"
-url = "/local/location-salle-des-fetes-stade/"
+url = "/local/salle-des-fetes-stade/"
 weight = 7
 
 [[main]]

@@ -22,3 +22,7 @@ Un circuit de randonnée vous fait découvrir la commune, en partant du bourg. D
 ## Tèrra Aventura
 
 Chasses aux trésors pour toute la famille : [Tèrra Aventura](https://www.terra-aventura.fr/).
+
+## Visites
+
+À venir…
