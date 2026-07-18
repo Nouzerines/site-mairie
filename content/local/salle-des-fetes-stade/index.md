@@ -16,7 +16,7 @@ La location comprend la vaisselle et le matériel de cuisine. Celle-ci est équi
 
 Un second espace est accessible avec un bar et les sanitaires.
 
-{{< gallery match="images/*" sortOrder="desc" rowHeight="150" margins="5" thumbnailResizeOptions="600x600 q90 Lanczos" showExif=true previewType="blur" embedPreview=true loadJQuery=true >}}
+{{< slider dir="images" class="max-w-full" height="400" width="720" webp="true" command="Fit" zoomable="true" >}}
 
 ## Stade
 
