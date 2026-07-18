@@ -16,3 +16,4 @@ jsconfig.json
 go.sum
 yarn.lock
 .idea
+assets/fullcalendar/

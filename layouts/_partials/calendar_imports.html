@@ -1,24 +1,38 @@
-{{ $fullcalendar := resources.Get "fullcalendar/all.global.js" | minify | fingerprint }}
-<script src="{{ $fullcalendar.Permalink }}"
-        integrity="{{ $fullcalendar.Data.Integrity }}"
-        crossorigin="anonymous"></script>
-{{ $french := resources.Get "fullcalendar/locales/fr.global.js" | minify | fingerprint }}
-<script src="{{ $french.Permalink }}"
-        integrity="{{ $french.Data.Integrity }}"
-        crossorigin="anonymous"></script>
-{{ $breezy := resources.Get "fullcalendar/themes/breezy/global.js" | minify | fingerprint }}
-<script src="{{ $breezy.Permalink }}"
-        integrity="{{ $breezy.Data.Integrity }}"
-        crossorigin="anonymous"></script>
-{{ $skeleton := resources.Get "fullcalendar/skeleton.css" | minify | fingerprint }}
-<link href="{{ $skeleton.Permalink }}"
-      integrity="{{ $skeleton.Data.Integrity }}"
-      rel="stylesheet">
-{{ $theme := resources.Get "fullcalendar/themes/breezy/theme.css" | minify | fingerprint }}
-<link href="{{ $theme.Permalink }}"
-      integrity="{{ $theme.Data.Integrity }}"
-      rel="stylesheet">
-{{ $palette := resources.Get "fullcalendar/themes/breezy/palettes/emerald.css" | minify | fingerprint }}
-<link href="{{ $palette.Permalink }}"
-      integrity="{{ $palette.Data.Integrity }}"
-      rel="stylesheet">
+{{ with resources.Get "fullcalendar/all.global.js" }}
+  {{ $fullcalendar := . | minify | fingerprint }}
+  <script src="{{ $fullcalendar.Permalink }}"
+          integrity="{{ $fullcalendar.Data.Integrity }}"
+          crossorigin="anonymous"></script>
+{{ else }}
+  {{ errorf "calendar_imports: fullcalendar/all.global.js introuvable. Lancez npm install (postinstall vendorise vers assets/fullcalendar)." }}
+{{ end }}
+{{ with resources.Get "fullcalendar/locales/fr.global.js" }}
+  {{ $french := . | minify | fingerprint }}
+  <script src="{{ $french.Permalink }}"
+          integrity="{{ $french.Data.Integrity }}"
+          crossorigin="anonymous"></script>
+{{ end }}
+{{ with resources.Get "fullcalendar/themes/breezy/global.js" }}
+  {{ $breezy := . | minify | fingerprint }}
+  <script src="{{ $breezy.Permalink }}"
+          integrity="{{ $breezy.Data.Integrity }}"
+          crossorigin="anonymous"></script>
+{{ end }}
+{{ with resources.Get "fullcalendar/skeleton.css" }}
+  {{ $skeleton := . | minify | fingerprint }}
+  <link href="{{ $skeleton.Permalink }}"
+        integrity="{{ $skeleton.Data.Integrity }}"
+        rel="stylesheet">
+{{ end }}
+{{ with resources.Get "fullcalendar/themes/breezy/theme.css" }}
+  {{ $theme := . | minify | fingerprint }}
+  <link href="{{ $theme.Permalink }}"
+        integrity="{{ $theme.Data.Integrity }}"
+        rel="stylesheet">
+{{ end }}
+{{ with resources.Get "fullcalendar/themes/breezy/palettes/emerald.css" }}
+  {{ $palette := . | minify | fingerprint }}
+  <link href="{{ $palette.Permalink }}"
+        integrity="{{ $palette.Data.Integrity }}"
+        rel="stylesheet">
+{{ end }}

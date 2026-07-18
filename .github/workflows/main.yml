@@ -57,6 +57,9 @@ jobs:
       - name: Install npm dependencies
         run: npm install
 
+      - name: Verify FullCalendar assets
+        run: test -f assets/fullcalendar/all.global.js
+
       - name: Build site
         run: npm run build
 

@@ -11,6 +11,7 @@
     "dev:example": "concurrently \"node scripts/themeGenerator.js --watch\" \"hugo server -s exampleSite\"",
     "build:example": "cd exampleSite && node ../scripts/themeGenerator.js && hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
     "preview:example": "cd exampleSite && node ../scripts/themeGenerator.js && hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
+    "postinstall": "node scripts/vendorFullcalendar.js",
     "update-modules": "node ./scripts/clearModules.js && hugo mod clean --all && hugo mod get -u ./... && hugo mod tidy",
     "remove-darkmode": "node ./scripts/removeDarkmode.js && yarn format",
     "remove-multilang": "node ./scripts/removeMultilang.js",
