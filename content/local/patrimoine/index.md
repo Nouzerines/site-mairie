@@ -50,3 +50,20 @@ Le 27 août 1920, le conseil municipal choisit le monument dont l'éditeur est l
 et de façon à être vu des différentes routes venant se croiser en cet endroit.
 
 Le monument est réalisé en 1922 et inauguré le 18 juin de la même année.
+
+## Le P'chot Prince
+
+![Le P'chot Prince](pchot-prince.jpg)
+
+Traduction du Petit Prince de Saint-Exupéry en nouzerinois ou parler de Nouzerines. 
+Les parlers du Croissant sont traditionnellement pratiqués au centre de la France, sur la frange Nord du Massif Central.
+
+Faisant partie de la famille des langues gallo-romanes, ils présentent simultanément de nombreux traits caractéristiques
+de l’occitan (limousin ou auvergnat) mais aussi des langues d’oïl (français, berrichon, bourbonnais ou
+poitevin-saintongeais). 
+
+Le nouzerinois ou parler de Nouzerines (Creuse), dans lequel est traduite cette version du 
+Petit Prince, est une variété de la partie orientale du Croissant (aire linguistique du bourbonnais d’oc). Plus 
+précisément, la traduction qui suit a été produite dans le parler du hameau du Mont (Le Mont).
+
+Le livre est en vente à la mairie pour **15 €**.
