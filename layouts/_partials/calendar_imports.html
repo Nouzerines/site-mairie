@@ -1,10 +1,18 @@
+{{ with resources.Get "fullcalendar/temporal-polyfill.global.js" }}
+  {{ $temporal := . | minify | fingerprint }}
+  <script src="{{ $temporal.Permalink }}"
+          integrity="{{ $temporal.Data.Integrity }}"
+          crossorigin="anonymous"></script>
+{{ else }}
+  {{ errorf "calendar_imports: fullcalendar/temporal-polyfill.global.js introuvable. Lancez npm install." }}
+{{ end }}
 {{ with resources.Get "fullcalendar/all.global.js" }}
   {{ $fullcalendar := . | minify | fingerprint }}
   <script src="{{ $fullcalendar.Permalink }}"
           integrity="{{ $fullcalendar.Data.Integrity }}"
           crossorigin="anonymous"></script>
 {{ else }}
-  {{ errorf "calendar_imports: fullcalendar/all.global.js introuvable. Lancez npm install (postinstall vendorise vers assets/fullcalendar)." }}
+  {{ errorf "calendar_imports: fullcalendar/all.global.js introuvable. Lancez npm install." }}
 {{ end }}
 {{ with resources.Get "fullcalendar/locales/fr.global.js" }}
   {{ $french := . | minify | fingerprint }}
