@@ -2,26 +2,42 @@
 title: "Mentions légales"
 ---
 
-#### Responsibility of Contributors
+### Responsable de publication
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+- Mairie de Nouzerines
+- Stéphane Neyret
+- 1 place de la mairie - 23600 Nouzerines
+- Tel : 05 55 82 01 82
+- Email : {{< mairie email >}}
 
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+### Hébergeur
 
-#### Gathering of Personal Information
+Le site est publié avec GitHub Pages, un service exploité par GitHub.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+Pour les utilisateurs situés dans l’Espace économique européen : GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, Pays-Bas.
 
-#### Protection of Personal- Information
+Société exploitante : GitHub, Inc., 88 Colin P. Kelly Jr Street, San Francisco, California 94107, États-Unis.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.
+[Contacter l’hébergeur](https://support.github.com/contact)
 
-Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat
+### Site Internet nouzerines.fr
 
-#### Privacy Policy Changes
+Les créations originales publiées sur le site nouzerines.fr restent protégées par le droit d’auteur. Leur mise en ligne n’emporte pas autorisation de reproduction ou de redistribution, sauf mention contraire indiquée sur la ressource concernée.
 
-1. Sll the Themefisher items are designed to be with the latest , We check all
-2. comments that threaten or harm the reputation of any person or organization
-3. personal information including, but limited to, email addresses, telephone numbers
-4. Any Update come in The technology Customer will get automatic Notification.
+Certains documents, polices, images ou références peuvent appartenir à des tiers. Leurs droits et conditions propres continuent de s’appliquer.
+
+### Liens hypertextes
+
+Tous les sites vers lesquels pointent le site nouzerines.fr ne sont pas sous la responsabilité de la Mairie.
+
+### Contenus
+
+Les services de la Mairie en charge des mises à jour et de l’animation du site mettent tout en œuvre pour vous offrir des informations claires, détaillées et fiables. Cependant, si malgré toute l’attention portée à la gestion de ces contenus par nos services vous deviez constater des inexactitudes, des manques d’informations ou des erreurs, nous vous invitons à en informer la Mairie, par email ou bien par courrier postal.
+
+### Utilisation des cookies
+
+Un cookie est un petit fichier texte au format alphanumérique déposé sur le disque dur de l’internaute par le serveur du site visité ou par un serveur tiers (service de web analytique, etc.). Grâce aux cookies, le site Internet de la Mairie de Nouzerines peut rendre la navigation plus simple et apporter des services complémentaires.
+
+La Mairie de Nouzerines n'utilise en aucun cas les données récupérées par les cookies pour les réutiliser à des fins commerciales ou de revente d'informations privées.
+
+Vous pouvez choisir de désactiver les cookies dans votre navigateur.

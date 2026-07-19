@@ -38,7 +38,18 @@ Contact : ecolenvies@gmail.com
 
 ### Les aventuriers du jeu
 
-À venir…
+![Les aventuriers du jeu](aventuriers-du-jeu.png)
+
+L'association « Les aventuriers du jeu » organise des soirées jeux de société une fois par mois, le premier samedi du 
+mois, en roulement sur les communes de Nouzerines, Bussière-Saint-Georges et Saint Marien.
+
+Ça se passe de 18h à 23h, et c’est ouvert à tout public !
+
+L’association apporte des jeux, et vous pouvez ramener les vôtres également. Chacun rapporte à boire et à manger, et on se partage tout ça, dans la joie et la bonne humeur !
+
+L'ensemble des dates est visible sur le site internet de l'association : [https://lesaventuriersdujeu23.fr/](https://lesaventuriersdujeu23.fr/)
+
+Si vous avez des questions, contactez nous par email : lesaventuriersdujeu23@gmail.com ou par téléphone : 06.29.64.18.53.
 
 ### Patrimoine 23
 
