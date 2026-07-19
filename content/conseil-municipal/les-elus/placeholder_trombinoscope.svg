@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200.56024mm"
+   height="200.56024mm"
+   viewBox="0 0 200.56024 200.56024"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="placeholder_trombinoscope.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.35634119"
+     inkscape:cx="57.529134"
+     inkscape:cy="557.05039"
+     inkscape:window-width="1916"
+     inkscape:window-height="1154"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(76.653915,47.252407)">
+    <rect
+       style="fill:#7fa156;fill-opacity:1;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="rect1"
+       width="200.56024"
+       height="200.56024"
+       x="-76.653915"
+       y="-47.252407" />
+    <path
+       id="path1"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:1.5385;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       d="M 23.626269,-32.489931 A 37.697143,37.697143 0 0 0 -14.070691,5.2070302 37.697143,37.697143 0 0 0 3.0298863,36.780569 c -33.3575523,11.883514 -57.8925043,51.93262 -57.8926393,99.509161 -1.25e-4,0.47598 0.0023,0.95196 0.0072,1.4279 H 102.10814 c 0.005,-0.47594 0.007,-0.95192 0.007,-1.4279 2e-5,-47.576601 -24.535669,-87.625703 -57.893284,-99.509161 A 37.697143,37.697143 0 0 0 61.323229,5.2070302 37.697143,37.697143 0 0 0 23.626269,-32.489931 Z" />
+  </g>
+</svg>

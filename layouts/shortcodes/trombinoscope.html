@@ -1,0 +1,34 @@
+{{ $page := .Page }}
+{{ $placeholder := $page.Resources.GetMatch "placeholder_trombinoscope*" }}
+{{ with $page.Params.elus }}
+  <ul class="trombinoscope">
+    {{ range . }}
+      {{ $name := .name }}
+      {{ $role := .role }}
+      {{ $photo := false }}
+      {{ with .photo }}
+        {{ $photo = $page.Resources.GetMatch . }}
+      {{ end }}
+      {{ if not $photo }}
+        {{ $photo = $placeholder }}
+      {{ end }}
+      <li class="trombinoscope-member">
+        {{ with $photo }}
+          <img
+            class="trombinoscope-photo"
+            src="{{ .RelPermalink }}"
+            alt="{{ $name }}"
+            loading="lazy"
+            width="140"
+            height="140" />
+        {{ end }}
+        <h4 class="trombinoscope-name">{{ $name }}</h4>
+        {{ with $role }}
+          <p class="trombinoscope-role">{{ . }}</p>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ else }}
+  {{ errorf "trombinoscope: aucun paramètre elus trouvé sur la page %s" $page.File.Path }}
+{{ end }}

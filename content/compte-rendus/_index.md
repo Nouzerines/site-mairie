@@ -1,6 +1,9 @@
 ---
-title: "Compte-rendus"
-description: "Comptes-rendus des séances du conseil municipal"
+title: "Arrêtés, délibérations et procès-verbaux"
+build:
+  render: always
+cascade:
+  build:
+    list: local
+    render: never
 ---
-
-Archives des comptes-rendus du conseil municipal de Nouzerines.

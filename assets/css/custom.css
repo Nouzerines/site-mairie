@@ -76,4 +76,106 @@
   .page-header-banner {
     @apply rounded-2xl bg-linear-to-b from-secondary/70 to-light px-8 py-14 dark:from-darkmode-light dark:to-darkmode-body;
   }
+
+  .trombinoscope {
+    @apply m-0 grid list-none grid-cols-2 gap-x-4 gap-y-8 p-0 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5;
+  }
+
+  .trombinoscope-member {
+    @apply text-center;
+  }
+
+  .trombinoscope-photo {
+    @apply mx-auto mb-3 aspect-square w-full max-w-[140px] rounded-lg object-cover object-center bg-light dark:bg-darkmode-light;
+  }
+
+  .trombinoscope-name {
+    @apply mb-1 text-base font-semibold text-text-dark dark:text-darkmode-text-dark;
+  }
+
+  .trombinoscope-role {
+    @apply m-0 text-sm text-text-light dark:text-darkmode-text-light;
+  }
+
+  .compte-rendus-list {
+    @apply m-0 list-none divide-y divide-border border-y border-border p-0 dark:divide-darkmode-border dark:border-darkmode-border;
+  }
+
+  .compte-rendus-link {
+    @apply flex flex-col gap-1 px-1 py-4 no-underline transition hover:bg-primary/5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 dark:hover:bg-darkmode-primary/10;
+  }
+
+  .compte-rendus-title {
+    @apply font-semibold text-text-dark underline-offset-2 hover:underline dark:text-darkmode-text-dark;
+  }
+
+  .compte-rendus-meta {
+    @apply flex shrink-0 flex-wrap items-center gap-x-3 gap-y-1 text-sm text-text-light dark:text-darkmode-text-light;
+  }
+
+  .compte-rendus-type {
+    @apply rounded bg-light px-2 py-0.5 text-xs font-medium text-text-dark dark:bg-darkmode-light dark:text-darkmode-text-dark;
+  }
+
+  .compte-rendus-filter.is-active {
+    @apply border-primary bg-primary text-white dark:border-darkmode-primary dark:bg-darkmode-primary dark:text-text-dark;
+  }
+
+  .compte-rendus-pagination .pagination {
+    @apply m-0 flex list-none flex-wrap items-center justify-center gap-2 p-0;
+  }
+
+  .compte-rendus-pagination .page-link {
+    @apply rounded px-4 py-2 text-text-dark transition hover:bg-light dark:text-darkmode-text-dark dark:hover:bg-darkmode-light;
+  }
+
+  .compte-rendus-pagination .page-item.active .page-link {
+    @apply bg-primary text-white hover:bg-primary dark:bg-darkmode-primary dark:text-text-dark;
+  }
+
+  .compte-rendus-pagination .page-item.disabled .page-link {
+    @apply cursor-not-allowed text-text-light opacity-50 hover:bg-transparent dark:text-darkmode-text-light;
+  }
+}
+
+/* Unlayered: must override module notice.css (also unlayered) */
+.notice.info {
+  color: var(--color-text);
+  border-color: var(--color-primary);
+  background-color: color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+.notice.info .notice-head,
+.notice.info .notice-head svg {
+  color: var(--color-primary);
+}
+
+.notice.info .notice-head p {
+  color: var(--color-primary);
+}
+
+.notice.info .notice-body,
+.notice.info .notice-body p {
+  color: var(--color-text);
+}
+
+.dark .notice.info {
+  color: var(--color-darkmode-text);
+  border-color: var(--color-darkmode-primary);
+  background-color: color-mix(
+    in srgb,
+    var(--color-darkmode-primary) 20%,
+    transparent
+  );
+}
+
+.dark .notice.info .notice-head,
+.dark .notice.info .notice-head svg,
+.dark .notice.info .notice-head p {
+  color: var(--color-darkmode-primary);
+}
+
+.dark .notice.info .notice-body,
+.dark .notice.info .notice-body p {
+  color: var(--color-darkmode-text);
 }

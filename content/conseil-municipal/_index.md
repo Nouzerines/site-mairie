@@ -6,7 +6,7 @@ menu_identifier: "conseil-municipal"
 
 ### Le conseil municipal
 
-À venir…
+Photo à venir…
 
 ### Liste des anciens maires
 

@@ -1,28 +1,196 @@
 {{ define "main" }}
   {{ partial "page-header" . }}
 
+  {{ $section := . }}
+  {{ $pages := .RegularPages.ByDate.Reverse }}
+  {{ $types := slice }}
+  {{ range $pages }}
+    {{ with .Params.type }}
+      {{ if not (in $types .) }}
+        {{ $types = $types | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $types = sort $types }}
+
   <section class="section">
     <div class="container">
-      <div class="row gx-5">
-        <div class="lg:col-8">
+      <div class="row justify-center">
+        <div class="lg:col-10">
           {{ with .Content }}
-            <div class="content mb-10">{{ . }}</div>
+            <div class="content mb-8">{{ . }}</div>
           {{ end }}
-          <div class="row">
-            {{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) }}
-            {{ range $paginator.Pages }}
-              <div class="md:col-6 mb-14">
-                {{ partial "components/compte-rendu-card" . }}
-              </div>
+
+          {{ if gt (len $types) 0 }}
+            <div
+              class="compte-rendus-toolbar mb-6 flex flex-wrap items-center gap-3"
+              role="group"
+              aria-label="Filtrer par type">
+              <span class="text-sm text-text-light dark:text-darkmode-text-light">Filtrer&nbsp;:</span>
+              <button
+                type="button"
+                class="btn btn-outline-primary btn-sm compte-rendus-filter is-active"
+                data-type=""
+                aria-pressed="true">
+                Tous
+              </button>
+              {{ range $types }}
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm compte-rendus-filter"
+                  data-type="{{ . | lower }}"
+                  aria-pressed="false">
+                  {{ . }}
+                </button>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          <ul class="compte-rendus-list" id="compte-rendus-list">
+            {{ range $pages }}
+              {{ $page := . }}
+              {{ $docPath := .Params.document | default "" }}
+              {{ if and $docPath (not (strings.HasPrefix $docPath "documents/")) (not (strings.HasPrefix $docPath "http")) }}
+                {{ $docPath = printf "documents/%s" $docPath }}
+              {{ end }}
+              {{ $href := "" }}
+              {{ if strings.HasPrefix $docPath "http" }}
+                {{ $href = $docPath }}
+              {{ else if $docPath }}
+                {{ with $section.Resources.GetMatch $docPath }}
+                  {{ $href = .RelPermalink }}
+                {{ else }}
+                  {{ warnf "compte-rendus: document introuvable %q (page %s)" $docPath $page.File.Path }}
+                {{ end }}
+              {{ end }}
+              {{ if $href }}
+                <li
+                  class="compte-rendus-item"
+                  data-type="{{ $page.Params.type | default "" | lower }}">
+                  <a
+                    class="compte-rendus-link"
+                    href="{{ $href }}"
+                    download>
+                    <span class="compte-rendus-title">{{ $page.Title }}</span>
+                    <span class="compte-rendus-meta">
+                      <span class="compte-rendus-type">{{ $page.Params.type | default "Document" }}</span>
+                      <time datetime="{{ $page.Date.Format "2006-01-02" }}">
+                        {{ time.Format ":date_long" $page.Date }}
+                      </time>
+                    </span>
+                  </a>
+                </li>
+              {{ end }}
             {{ end }}
-          </div>
-          {{ partial "components/pagination.html" . }}
-        </div>
-        <div class="lg:col-4">
-          {{ $widget := site.Params.widgets.sidebar }}
-          {{ partialCached "widgets/widget-wrapper" (dict "Widgets" $widget "Scope" .) }}
+          </ul>
+
+          <nav
+            class="compte-rendus-pagination mt-10 hidden"
+            id="compte-rendus-pagination"
+            aria-label="Pagination"></nav>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const list = document.getElementById("compte-rendus-list");
+      const pagination = document.getElementById("compte-rendus-pagination");
+      if (!list || !pagination) return;
+
+      const pageSize = 10;
+      const filters = document.querySelectorAll(".compte-rendus-filter");
+      const allItems = Array.from(list.querySelectorAll(".compte-rendus-item"));
+      let activeType = "";
+      let currentPage = 1;
+
+      const visibleItems = () =>
+        allItems.filter(
+          (item) => !activeType || item.dataset.type === activeType,
+        );
+
+      const render = () => {
+        const items = visibleItems();
+        const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
+        currentPage = Math.min(currentPage, totalPages);
+        const start = (currentPage - 1) * pageSize;
+        const end = start + pageSize;
+
+        allItems.forEach((item) => {
+          item.hidden = true;
+        });
+        items.slice(start, end).forEach((item) => {
+          item.hidden = false;
+        });
+
+        if (totalPages <= 1) {
+          pagination.classList.add("hidden");
+          pagination.innerHTML = "";
+          return;
+        }
+
+        pagination.classList.remove("hidden");
+        let html = '<ul class="pagination">';
+        html +=
+          '<li class="page-item' +
+          (currentPage === 1 ? " disabled" : "") +
+          '"><button type="button" class="page-link" data-page="' +
+          (currentPage - 1) +
+          '" aria-label="Page précédente"' +
+          (currentPage === 1 ? " disabled" : "") +
+          ">&laquo;</button></li>";
+
+        for (let page = 1; page <= totalPages; page++) {
+          html +=
+            '<li class="page-item' +
+            (page === currentPage ? " active" : "") +
+            '"><button type="button" class="page-link" data-page="' +
+            page +
+            '"' +
+            (page === currentPage ? ' aria-current="page"' : "") +
+            ">" +
+            page +
+            "</button></li>";
+        }
+
+        html +=
+          '<li class="page-item' +
+          (currentPage === totalPages ? " disabled" : "") +
+          '"><button type="button" class="page-link" data-page="' +
+          (currentPage + 1) +
+          '" aria-label="Page suivante"' +
+          (currentPage === totalPages ? " disabled" : "") +
+          ">&raquo;</button></li>";
+        html += "</ul>";
+        pagination.innerHTML = html;
+      };
+
+      filters.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filters.forEach((b) => {
+            b.classList.remove("is-active");
+            b.setAttribute("aria-pressed", "false");
+          });
+          btn.classList.add("is-active");
+          btn.setAttribute("aria-pressed", "true");
+          activeType = btn.dataset.type || "";
+          currentPage = 1;
+          render();
+        });
+      });
+
+      pagination.addEventListener("click", (event) => {
+        const btn = event.target.closest("[data-page]");
+        if (!btn || btn.disabled) return;
+        const page = Number(btn.dataset.page);
+        if (!page || page < 1) return;
+        currentPage = page;
+        render();
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      render();
+    });
+  </script>
 {{ end }}
