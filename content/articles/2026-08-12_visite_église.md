@@ -7,7 +7,7 @@ date-publication: 2026-07-24
 #categories: ["Application", "Data"]
 #author: "John Doe"
 #tags: ["nextjs", "tailwind"]
-début: 2026-08-12T14:30:00
+debut: 2026-08-12T14:30:00
 fin: 2026-08-12T17:30:00
 ---
 

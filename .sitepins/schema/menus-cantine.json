@@ -1,0 +1,57 @@
+{
+  "file": "content/menus-cantine/2026-05-12.md",
+  "fileType": "md",
+  "fmType": "yaml",
+  "template": [
+    {
+      "name": "date",
+      "label": "Date",
+      "type": "Date",
+      "value": "2026-07-24",
+      "isIgnored": false,
+      "defaultValue": "",
+      "alwaysUseCurrentDate": true
+    },
+    {
+      "name": "jours",
+      "label": "Jours",
+      "type": "object",
+      "isIgnored": false,
+      "defaultValue": "",
+      "fields": [
+        {
+          "name": "lundi",
+          "label": "Lundi",
+          "type": "Array",
+          "value": [],
+          "isIgnored": false,
+          "defaultValue": ""
+        },
+        {
+          "name": "mardi",
+          "label": "Mardi",
+          "type": "Array",
+          "value": [],
+          "isIgnored": false,
+          "defaultValue": ""
+        },
+        {
+          "name": "jeudi",
+          "label": "Jeudi",
+          "type": "Array",
+          "value": [],
+          "isIgnored": false,
+          "defaultValue": ""
+        },
+        {
+          "name": "vendredi",
+          "label": "Vendredi",
+          "type": "Array",
+          "value": [],
+          "isIgnored": false,
+          "defaultValue": ""
+        }
+      ]
+    }
+  ]
+}

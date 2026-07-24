@@ -11,7 +11,7 @@
           {{ end }}
           <h1 class="h2 mb-4">
             {{ .Title }}
-            {{ with .Params.début }}
+            {{ with .Params.debut }}
               {{ $start := time . }}
               - {{ time.Format ":date_long" $start }}{{ if or $start.Hour $start.Minute }}{{ printf " à %02dh%02d" $start.Hour $start.Minute }}{{ end }}
             {{ end }}

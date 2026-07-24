@@ -5,33 +5,27 @@
   "template": [
     {
       "name": "title",
-      "label": "Title",
+      "label": "Titre",
       "type": "string",
       "value": "",
       "isIgnored": false,
+      "isRequired": true,
       "defaultValue": ""
     },
     {
       "name": "date",
-      "label": "Date",
+      "label": "Date de publication",
       "type": "Date",
-      "value": "",
+      "value": "2026-07-24",
+      "description": "",
       "isIgnored": false,
+      "isRequired": false,
       "defaultValue": "",
-      "alwaysUseCurrentDate": false
+      "alwaysUseCurrentDate": true
     },
     {
-      "name": "draft",
-      "label": "Draft",
-      "type": "boolean",
-      "value": false,
-      "description": "image: \"/images/banner.jpg\"\ncategories: [\"Application\", \"Data\"]\nauthor: \"John Doe\"\ntags: [\"nextjs\", \"tailwind\"]\nstart: 2026-05-19\nend: 2026-05-22",
-      "isIgnored": false,
-      "defaultValue": false
-    },
-    {
-      "name": "start",
-      "label": "start",
+      "name": "debut",
+      "label": "Date de début",
       "type": "Date",
       "value": "",
       "description": "",
@@ -41,8 +35,8 @@
       "alwaysUseCurrentDate": false
     },
     {
-      "name": "end",
-      "label": "end",
+      "name": "fin",
+      "label": "Date de fin",
       "type": "Date",
       "value": "",
       "description": "",
@@ -53,7 +47,7 @@
     },
     {
       "name": "image",
-      "label": "image",
+      "label": "Image",
       "type": "media",
       "value": "",
       "description": "",
