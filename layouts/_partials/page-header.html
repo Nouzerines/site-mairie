@@ -2,7 +2,6 @@
   <div class="container text-center">
     <div class="page-header-banner">
       <h1>{{ T (printf "%s" (lower .Title)) | default .Title | title }}</h1>
-      {{ partial "components/breadcrumb" (dict "Context" . "Class" "mt-6") }}
     </div>
   </div>
 </section>
