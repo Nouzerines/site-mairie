@@ -1,32 +1,34 @@
 {{ $page := . }}
 {{ $jours := $page.Params.jours }}
 {{ if $jours }}
-  {{ $dayKeys := slice "lundi" "mardi" "mercredi" "jeudi" "vendredi" }}
-  {{ $dayLabels := slice "Lundi" "Mardi" "Mercredi" "Jeudi" "Vendredi" }}
-  {{ $courses := slice "entree" "plat" "fromage" "dessert" }}
-  {{ $courseLabels := slice "Entrée" "Plat" "Fromage" "Dessert" }}
+  {{ $dayKeys := slice "lundi" "mardi" "jeudi" "vendredi" }}
+  {{ $dayLabels := slice "Lundi" "Mardi" "Jeudi" "Vendredi" }}
+  {{ $rowCount := 0 }}
+  {{ range $dayKeys }}
+    {{ with index $jours . }}
+      {{ $rowCount = math.Max $rowCount (len .) }}
+    {{ end }}
+  {{ end }}
   <div class="menus-cantine-table content">
     <table>
       <thead>
         <tr>
-          <th scope="row"></th>
           {{ range $i, $key := $dayKeys }}
-            {{ $day := index $jours $key }}
-            {{ if $day }}
+            {{ with index $jours $key }}
               <th scope="col">{{ index $dayLabels $i }}</th>
             {{ end }}
           {{ end }}
         </tr>
       </thead>
       <tbody>
-        {{ range $ci, $course := $courses }}
+        {{ range seq $rowCount }}
+          {{ $row := sub . 1 }}
           <tr>
-            <th scope="row">{{ index $courseLabels $ci }}</th>
             {{ range $dayKeys }}
               {{ $day := index $jours . }}
-              <td>
-                {{ if $day }}{{ index $day $course | default "—" }}{{ else }}—{{ end }}
-              </td>
+              {{ if $day }}
+                <td>{{ index $day $row | default "—" }}</td>
+              {{ end }}
             {{ end }}
           </tr>
         {{ end }}

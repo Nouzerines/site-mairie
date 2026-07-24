@@ -63,7 +63,6 @@
 
         <h2 class="h3 mb-6 scroll-mt-36" id="cantine">
           Menu de la cantine
-          <a href="{{ "menus-cantine" | relURL }}" class="underline">(Tous les menus)</a>
         </h2>
         {{ with site.GetPage "menus-cantine" }}
           {{ with index .RegularPages.ByDate.Reverse 0 }}
