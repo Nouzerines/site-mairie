@@ -14,3 +14,5 @@ Une navette gratuite transporte les élèves entre les établissements. Le ramas
 Le RPI est très actif, avec de nombreux projets, sorties et voyages organisés tout au long de l'année : fête de Noël, chasse à l'œuf, kermesse… Une association de parents d'élèves, [École en vies](../associations#école-en-vies), soutient les activités des écoles en organisant des événements.
 
 Pour la rentrée 2026, Bussière Saint Georges accueille 21 élèves, Nouzerines 20 élèves, et Saint Marien 21 élèves, soit un total de 62 élèves.
+
+{{< gallery dir="images" class="" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}

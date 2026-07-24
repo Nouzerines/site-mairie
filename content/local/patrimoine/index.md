@@ -39,6 +39,8 @@ de la fontaine…
 
 ## Halle
 
+{{< gallery dir="halle" class="" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
+
 À venir…
 
 ## Monument aux morts
