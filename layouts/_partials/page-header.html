@@ -1,6 +1,31 @@
+{{/* banner.jpg on this page, else walk up CurrentSection → parents */}}
+{{ $banner := false }}
+{{ with .Resources.GetMatch "banner.jpg" }}
+  {{ $banner = . }}
+{{ end }}
+{{ if not $banner }}
+  {{ $section := .CurrentSection }}
+  {{ range seq 8 }}
+    {{ if and (not $banner) $section }}
+      {{ with $section.Resources.GetMatch "banner.jpg" }}
+        {{ $banner = . }}
+      {{ end }}
+      {{ $section = $section.Parent }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $bannerURL := "" }}
+{{ with $banner }}
+  {{ $img := .Resize "1800x q75" }}
+  {{ $bannerURL = $img.RelPermalink }}
+{{ end }}
+
 <section>
   <div class="container text-center">
-    <div class="page-header-banner">
+    <div
+      class="page-header-banner{{ with $bannerURL }} page-header-banner--has-image{{ end }}"
+      {{ with $bannerURL }}style="--page-header-banner-image: url('{{ . }}')"{{ end }}>
       <h1>{{ T (printf "%s" (lower .Title)) | default .Title | title }}</h1>
     </div>
   </div>

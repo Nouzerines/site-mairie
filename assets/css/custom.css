@@ -74,7 +74,32 @@
   }
 
   .page-header-banner {
-    @apply rounded-2xl bg-linear-to-b from-secondary/70 to-light px-8 py-14 dark:from-darkmode-light dark:to-darkmode-body;
+    @apply relative overflow-hidden rounded-2xl bg-linear-to-b from-secondary/70 to-light px-8 py-14 dark:from-darkmode-light dark:to-darkmode-body;
+  }
+
+  .page-header-banner--has-image {
+    @apply min-h-56 border-0 bg-cover bg-center bg-no-repeat py-24 sm:min-h-72 sm:py-28;
+    background-image: var(--page-header-banner-image);
+  }
+
+  .page-header-banner--has-image::before {
+    content: "";
+    @apply absolute inset-0 bg-black/20;
+  }
+
+  .page-header-banner--has-image h1 {
+    @apply relative z-10 text-white;
+    text-shadow:
+      0 0 8px rgb(0 0 0 / 0.35),
+      0 0 16px rgb(0 0 0 / 0.15),
+      2px 0 4px rgb(0 0 0 / 0.3),
+      -2px 0 4px rgb(0 0 0 / 0.3),
+      0 2px 4px rgb(0 0 0 / 0.3),
+      0 -2px 4px rgb(0 0 0 / 0.3),
+      2px 2px 5px rgb(0 0 0 / 0.15),
+      -2px -2px 5px rgb(0 0 0 / 0.15),
+      2px -2px 5px rgb(0 0 0 / 0.15),
+      -2px 2px 5px rgb(0 0 0 / 0.15);
   }
 
   .trombinoscope {
