@@ -19,4 +19,6 @@ Elle est voisine de Bussière-Saint-Georges, Malleret-Boussac, Bétête, Tercill
 
 La commune se situe à une altitude moyenne de 418 mètres (minimum 404m, maximum 454m).
 
-![carte](carte-nouzerines.png)
+La commune emploie trois agents : secrétaire de mairie, cantonnier et cantinière.
+
+{{< slider dir="images" class="max-w-[600px] ml-0" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
