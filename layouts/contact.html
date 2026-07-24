@@ -1,13 +1,19 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
+{{ partial "page-header" . }}
 
-  <section class="section-sm">
-    <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-8">
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="lg:col-8">
+        <h2 class="h3 mb-4">Mairie</h2>
+        <p>
           {{ partial "mairie-contact-details" (dict "footer" false) }}
-        </div>
+        </p>
+        {{ with .Content }}
+          <div class="content mt-10">{{ . }}</div>
+        {{ end }}
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {{ end }}
