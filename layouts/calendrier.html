@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
+    timeZone: 'Europe/Paris',
     events: '{{ "articles/index.json" | relURL }}',
     eventClick: function(info) {
       if (info.event.url) {

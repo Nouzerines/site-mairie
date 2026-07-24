@@ -4,10 +4,10 @@
   "title" .Title
   "url" (.Params.url | default .RelPermalink)
 }}
-{{ if .Params.start }}
+{{ if .Params.début }}
 {{ $event = merge $event (dict
-  "start" .Params.start
-  "end" (.Params.end | default "")
+  "start" .Params.début
+  "end" (.Params.fin | default "")
 ) }}
 {{ end }}
 {{ $articles = $articles | append $event }}
