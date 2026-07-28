@@ -51,10 +51,6 @@ L'ensemble des dates est visible sur le site internet de l'association : [https:
 
 Si vous avez des questions, contactez nous par email : lesaventuriersdujeu23@gmail.com ou par téléphone : 06.29.64.18.53.
 
-### Patrimoine 23
-
-À venir…
-
-### Toutous sportifs creusois
+### Patrimoine Nouzerines 23
 
 À venir…

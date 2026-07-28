@@ -8,10 +8,6 @@ layout: "single"
 La mairie de Nouzerines ne dispose pas du matériel nécessaire pour délivrer des cartes nationales d'identité et des passeports.
 La mairie la plus proche équipée est celle de Boussac. Rendez-vous [ici](https://www.boussac.fr/demarches-administratives/) pour plus d'informations.
 
-## Actes
-
-Les différents actes (naissance, mariage, décès) sont à demander à la mairie du lieu où ils ont été effectués.
-
 ## Urbanisme
 
 |                                     | Description                                                                                                    | Lien                                                                               |
@@ -32,15 +28,18 @@ Les différents actes (naissance, mariage, décès) sont à demander à la mairi
 
 Les CERFA sont à retournés en mairie.
 
-## France Services
+## Actes
 
-Des maisons France Services sont à votre disposition pour vous aider dans vos démarches administratives. 
+Les différents actes (naissance, mariage, décès) sont à demander à la mairie du lieu où ils ont été effectués.
 
-La plus proche est celle de Boussac : [https://www.france-services.gouv.fr/le-reseau/france-services-boussac](https://www.france-services.gouv.fr/le-reseau/france-services-boussac)
-
-### Cimetière
+## Cimetière
 
 Contactez la mairie pour connaître les tarifs des concessions.
 
 [https://www.gestion-cimetiere.fr/NOUZERINES/index_RO.html](https://www.gestion-cimetiere.fr/NOUZERINES/index_RO.html)
 
+## France Services
+
+Des maisons France Services sont à votre disposition pour vous aider dans vos démarches administratives. 
+
+La plus proche est celle de Boussac : [https://www.france-services.gouv.fr/le-reseau/france-services-boussac](https://www.france-services.gouv.fr/le-reseau/france-services-boussac)

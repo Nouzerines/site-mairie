@@ -69,26 +69,26 @@ identifier = "tourisme"
 
 [[main]]
 parent = "tourisme"
+name = "Hébergement"
+url = "/tourisme/hebergement/"
+weight = 1
+
+[[main]]
+parent = "tourisme"
 name = "Loisirs"
 url = "/tourisme/loisirs/"
-weight = 1
+weight = 2
 
 [[main]]
 parent = "tourisme"
 name = "Marchés"
 url = "/tourisme/marches/"
-weight = 2
-
-[[main]]
-parent = "tourisme"
-name = "Où dormir"
-url = "/tourisme/ou-dormir/"
 weight = 3
 
 [[main]]
 parent = "tourisme"
-name = "Où manger"
-url = "/tourisme/ou-manger/"
+name = "Restauration"
+url = "/tourisme/restauration/"
 weight = 4
 
 [[main]]
