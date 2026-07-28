@@ -15,6 +15,14 @@
 }
 
 @layer components {
+  .content {
+    @apply prose-a:font-medium prose-a:text-primary prose-a:underline prose-a:decoration-primary/40 prose-a:underline-offset-2 dark:prose-a:text-darkmode-primary dark:prose-a:decoration-darkmode-primary/40;
+  }
+
+  .content a:not(.btn):hover {
+    @apply text-dark decoration-dark dark:text-darkmode-dark dark:decoration-darkmode-dark;
+  }
+
   .header {
     @apply border-b border-border bg-secondary dark:border-darkmode-border dark:bg-darkmode-light;
   }
