@@ -10,7 +10,7 @@ Envoyez-nous par mail à {{< mairie email >}} un texte de présentation, une ima
 {{< /notice >}}
 
 
-### Association communale de chasse agréée de Nouzerines
+### Association Communale de Chasse Agréée de Nouzerines (ACCA)
 
 À venir…
 
