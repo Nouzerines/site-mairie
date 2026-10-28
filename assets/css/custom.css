@@ -54,6 +54,18 @@
     @apply overflow-visible;
   }
 
+  .home-article-card {
+    @apply h-full rounded-2xl border border-border bg-(--color-border) p-6 dark:border-darkmode-border dark:bg-(--color-darkmode-border);
+  }
+
+  .home-article-card > div {
+    @apply flex h-full flex-col;
+  }
+
+  .home-article-card .btn {
+    @apply mt-auto;
+  }
+
   .home-inpage-nav {
     @apply sticky z-20 mb-8 border-b border-primary/25 border-border bg-secondary/95 py-3 pl-4 dark:border-darkmode-border dark:bg-darkmode-body/95 lg:pl-6;
     top: 5rem;
@@ -169,6 +181,15 @@
   .compte-rendus-pagination .page-item.disabled .page-link {
     @apply cursor-not-allowed text-text-light opacity-50 hover:bg-transparent dark:text-darkmode-text-light;
   }
+}
+
+/* Unlayered: utilities such as bg-body win over @layer components */
+.home-article-card > div {
+  background-color: var(--color-border);
+}
+
+.dark .home-article-card > div {
+  background-color: var(--color-darkmode-border);
 }
 
 /* Unlayered: must override module notice.css (also unlayered) */

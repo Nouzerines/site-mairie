@@ -55,8 +55,10 @@
         <div class="row">
           {{ $articles := where site.RegularPages "Section" "articles" }}
           {{ range first 4 ($articles.ByDate.Reverse) }}
-          <div class="md:col-6 mb-14">
-            {{ partial "components/blog-card" . }}
+          <div class="md:col-6 mb-8">
+            <div class="home-article-card">
+              {{ partial "components/blog-card" . }}
+            </div>
           </div>
           {{ end }}
         </div>
