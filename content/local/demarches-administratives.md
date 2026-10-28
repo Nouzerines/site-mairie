@@ -5,7 +5,20 @@ layout: "single"
 
 ## France Services
 
-Des maisons France Services sont à votre disposition pour vous aider dans vos démarches administratives.
+Des maisons France Services sont à votre disposition pour vous aider dans vos démarches administratives :
+  - France Titres
+  - Allocations familiales
+  - Assurance Maladie
+  - Assurance retraite
+  - Chèque énergie
+  - Finances publiques
+  - France Rénov'
+  - France Travail
+  - La Poste
+  - Mutualité sociale agricole (MSA)
+  - Point-justice
+  - Urssaf
+
 
 La plus proche est celle de Boussac : [https://www.france-services.gouv.fr/le-reseau/france-services-boussac](https://www.france-services.gouv.fr/le-reseau/france-services-boussac)
 

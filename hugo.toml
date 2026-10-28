@@ -46,6 +46,13 @@ pagerSize = 10
 path = 'page'
 
 
+############################ Security #############################
+# Hugo 0.165 removed tailwindcss from the default exec allow list.
+# This site builds CSS with css.TailwindCSS, so the CLI must be allowed.
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+
 ############################# Build ##############################
 [build]
 [build.buildStats]

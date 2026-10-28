@@ -20,7 +20,7 @@ Envoyez-nous par mail à {{< mairie email >}} un texte de présentation, une ima
 
 ### Comité des fêtes
 
-Actuellement en dormance, si vous souhaitez participer à son relancement, contactez la mairie qui vous mettra en relation.
+Actuellement en dormance, si vous souhaitez participer à son relancement, contactez Catherine au 06 72 56 26 01 ou par email nouzerinesenfete@gmail.com.
 
 ### École en vies
 
@@ -49,7 +49,7 @@ L’association apporte des jeux, et vous pouvez ramener les vôtres également.
 
 L'ensemble des dates est visible sur le site internet de l'association : [https://lesaventuriersdujeu23.fr/](https://lesaventuriersdujeu23.fr/)
 
-Si vous avez des questions, contactez nous par email : lesaventuriersdujeu23@gmail.com ou par téléphone : 06.29.64.18.53.
+Si vous avez des questions, contactez nous par email : lesaventuriersdujeu23@gmail.com ou par téléphone : 06 29 64 18 53.
 
 ### Patrimoine Nouzerines 23
 

@@ -15,4 +15,4 @@ Le RPI est très actif, avec de nombreux projets, sorties et voyages organisés 
 
 Pour la rentrée 2026, Bussière Saint Georges accueille 21 élèves, Nouzerines 20 élèves, et Saint Marien 21 élèves, soit un total de 62 élèves.
 
-{{< gallery dir="images" class="" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
+{{< slider dir="images" class="max-w-full" height="400" width="720" webp="true" command="Fit" zoomable="true" >}}

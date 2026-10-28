@@ -3,6 +3,10 @@ title: "Loisirs"
 layout: "single"
 ---
 
+## Visites
+
+ - Visite de l'atelier de lissière de Françoise Vernaudon - 05 55 82 01 52 - [https://www.tapisserie-aubusson-vernaudon.fr]()
+
 ## Baignades
 
 - [Plan d'eau de la Roussille](https://www.chatelus-malvaleix.fr/plan-d-eau), Châtelus-Malvaleix.
@@ -22,7 +26,3 @@ Un circuit de randonnée vous fait découvrir la commune, en partant du bourg. D
 ## Tèrra Aventura
 
 Chasses aux trésors pour toute la famille : [Tèrra Aventura](https://www.terra-aventura.fr/).
-
-## Visites
-
-À venir…
