@@ -26,10 +26,12 @@ Actuellement en dormance, si vous souhaitez participer à son relancement, conta
 
 ![École en vies - logo](logo-ecole-en-vies.png)
 
-Association des parents d'élèves du RPI, elle organise des événements et ventes pour récolter de l'argent permettant de 
+Association des parents d'élèves du Regroupement Pédagogique Intercommunal (RPI), elle organise des événements et ventes pour récolter de l'argent permettant de 
 soutenir les projets des trois écoles (Bussière-Saint-Georges, Nouzerines et Saint Marien).
 
-Chaque année, une rando est organisée début avril, ouverte à tous.
+Chaque année, une rando est organisée entre mars et avril, ouverte à tous.
+
+Des animations, spectacles et autres activités sont également proposées aux enfants du RPI tout au long de l'année. 
 
 Seuls les parents d'élèves peuvent être membres, mais tout le monde peut soutenir l'association — et donc les écoles — 
 en participant aux événements.
